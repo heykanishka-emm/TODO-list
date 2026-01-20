@@ -3,50 +3,50 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Cute Checkpoint To‑Do (Flask)</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <title>Cute Checkpoint To-Do</title>
+
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
   <main class="app">
     <header class="header">
-      <h1>Checkpoint To‑Do</h1>
-      <p class="subtitle">Add unlimited tasks • Mark checkpoints • Stay cute ✨</p>
+      <h1>Checkpoint To-Do 💗</h1>
+      <p class="subtitle">Add tasks • Stay productive • Stay cute ✨</p>
     </header>
 
     <section class="creator">
-      <input id="taskInput" type="text" placeholder="Add a new task and press Enter..." autofocus />
+      <input id="taskInput" type="text" placeholder="Add a new task..." />
       <input id="categoryInput" type="text" placeholder="Category (optional)" />
       <button id="addBtn" class="btn">Add</button>
     </section>
 
     <section class="controls">
       <div class="counts">
-        <span id="totalCount">0</span> tasks • <span id="completedCount">0</span> done
+        <span id="totalCount">0</span> tasks •
+        <span id="completedCount">0</span> done
       </div>
       <div class="actions">
-        <button id="exportBtn" class="btn small">Save Tasks</button>
-        <button id="clearCompleted" class="btn small">Clear completed tasks</button>
+        <button id="clearCompleted" class="btn small">Clear completed</button>
         <button id="clearAll" class="btn small ghost">Clear all</button>
       </div>
     </section>
 
-    <ul id="taskList" class="task-list" aria-live="polite"></ul>
+    <ul id="taskList" class="task-list"></ul>
 
     <footer class="footer">
-      <small>Saved to server (SQLite) • Export / Import JSON available</small>
+      <small>Saved locally in your browser 💾</small>
     </footer>
   </main>
 
-  <!-- cute floating hearts for background -->
   <div class="hearts" aria-hidden="true">
-    <div class="heart" style="--i:0; --x:10%; --d:8s"></div>
-    <div class="heart" style="--i:1; --x:30%; --d:10s"></div>
-    <div class="heart" style="--i:2; --x:50%; --d:9s"></div>
-    <div class="heart" style="--i:3; --x:70%; --d:11s"></div>
-    <div class="heart" style="--i:4; --x:90%; --d:12s"></div>
+    <div class="heart" style="--x:10%; --d:8s"></div>
+    <div class="heart" style="--x:30%; --d:10s"></div>
+    <div class="heart" style="--x:50%; --d:9s"></div>
+    <div class="heart" style="--x:70%; --d:11s"></div>
+    <div class="heart" style="--x:90%; --d:12s"></div>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
-  <script src="{{ url_for('static', filename='script.js') }}"></script>
-
+  <script src="script.js"></script>
+</body>
 </html>
